@@ -46,7 +46,8 @@ class DictionaryTree
   end
 
   def num_words
-    @nodes.length
+    real_nodes = @nodes.select { |key, value|  value != nil }
+    real_nodes.length
   end
 
 end
